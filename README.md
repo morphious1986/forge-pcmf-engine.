@@ -1,41 +1,37 @@
-# Forge PCMF / Living Memory Engine
+# Forge PCMF / Living Memory — Native Community Engine
 
-An open-source persistent-memory and continuity engine for AI systems and agents, designed around **deterministic state, governed memory admission, provenance tracking, owner authorization, and auditable decisions**.
+R17/R244 · C11/C++20 · Ubuntu-compatible Linux x86-64 · Apache License 2.0.
 
-> **Early-stage public collaboration repository.** The native PCMF engine source has **not yet been published here**. Its first public source package is subject to security, privacy, dependency, and licensing review. No installation or production-use claims are made by this README.
+PCMF is a governed, persistent memory and continuity engine for AI agents. The core uses deterministic admission rules, client-scoped access, provenance checks, owner approval for sensitive decisions, and an auditable event ledger.
 
-## What we're working toward
+This is community SOURCE for experimentation and review, NOT an export of the running PCMF instance. It contains no production memory, credentials, original operational Git history, or model weights.
 
-PCMF separates a model's *proposal* from the deterministic decision to accept, reject, or review a lasting memory. The public project aims to make state transitions testable, keep a trace of decisions, and prevent unverified snapshots or model-generated claims from silently becoming authoritative.
+## Build and run the synthetic tests
 
-Key design areas for community review:
-- Provenance and evidence needed for durable memory admission.
-- Explicit owner consent and review-required stop conditions.
-- Single-writer continuity and fail-closed conflict handling.
-- Clear boundaries between execution tools, personal memory, and system state.
-- Reproducible tests, documentation, threat modeling, and portable deployments.
+Prerequisites: gcc/clang with C11/C++20, POSIX Linux facilities, Python 3, GNU coreutils, and libX11 development headers for the optional GUI.
 
-These are project goals and design constraints, **not a claim that every feature is available in a published release**.
+    sh scripts/build.sh
+    ./bin/pcmf-selftest "$(pwd)/bin"
+    python3 tests/test_public_safety_paths.py
+    python3 tests/test_public_socket_boundary.py
 
-## Help build it
+Run scripts/test.sh only inside a disposable VM, container, or test user with its own HOME and user-service boundary. It includes an installer, uninstaller, and a guarded synthetic data purge. Never point purge modes at a real memory store.
 
-**Contributors are welcome now**, including people working on C++, Linux, agent infrastructure, evaluation, security, test engineering, and technical writing.
+## Architecture
 
-1. Browse or open an [issue](../../issues) to discuss a feature, bug, test plan, or design question.
-2. Read [CONTRIBUTING.md](CONTRIBUTING.md) for the proposed fork → branch → pull request → review workflow.
-3. Use the [pull request template](.github/PULL_REQUEST_TEMPLATE.md) when submitting a change.
-4. Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md).
+- src/: native engine, policy, CLI, Unix-domain service and optional local connectors.
+- tests/: synthetic engine, admission, policy and safety tests.
+- scripts/: deterministic native builds, release packaging and safe installer lifecycle.
+- integrations/sol/app/: optional client with explicitly configured credentials.
+- assets/: freshly generated, synthetic mathematical tone with provenance notes.
+- docs/: historical design and operations notes; some R14 references are older than R244.
 
-Contributions are reviewed before merging. You do **not** need access to the owner's machines, private memory, or production installation to contribute.
+The public example deliberately replaces operational migration receipt identifiers with generic EXAMPLE_NODE fixtures. This source is not authorized to import live memory or assert production writer authority.
 
-## Security and privacy boundary
+## Security boundaries
 
-**Never upload** personal memory records, credentials, tokens, live ledger databases, privileged configuration, production backups, or real user/customer data. Please use synthetic examples. The public engine is separate from private operational state.
+The local service uses a private authenticated Unix socket. The local-model connector is loopback-only and cannot independently admit memories. The Sol client requires explicitly configured SOL_PCMF_CLIENT_KEY and SOL_PCMF_PROFILE. REVIEW_REQUIRED is a hard stop, not permission to retry.
 
-## License
+Do not commit STORE, keys, config, state, backups, receipts, memory data, private logs, machine credentials or access tokens. Use invented synthetic fixtures. Contributions use issues, forks and reviewed pull requests; no production PCMF access is needed.
 
-[Apache License 2.0](LICENSE). It permits use, modification, distribution, and commercial adoption under its terms.
-
-## Release status
-
-Public source review and initial installation documentation: **pending**. The repository currently contains governance and collaboration documentation, not a complete downloadable engine.
+See CONTRIBUTING.md, SECURITY.md, CHANGELOG_PUBLIC.md and NOTICE. No warranty or claim of production suitability is made.

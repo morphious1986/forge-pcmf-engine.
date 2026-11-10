@@ -1,0 +1,12 @@
+Forge PCMF / Living Memory Engine — public source notice
+
+Copyright 2026 PCMF contributors.
+The included reviewed source is offered under Apache License, Version 2.0 (LICENSE), subject to each contributor holding the necessary rights.
+
+No third-party source library, model weights, personal memory, live credentials, proprietary historical patch binary or operational backup is knowingly bundled. External, separately licensed build/runtime prerequisites include a C11 compiler, C++20 and libc runtimes, POSIX system facilities, GNU tools, Python 3 and optional libX11/zenity/pkexec/audio playback for the GUI. These dependencies are not redistributed.
+
+The WAV in assets/pcmf-approval-retro-chime-v2.wav was freshly and deterministically synthesized as a mathematical two-tone PCM waveform for this candidate. No recording or third-party sound file was used. See assets/SYNTHETIC_SOUND_PROVENANCE.json.
+
+Production migration receipts and private writer credentials are excluded. Example source migration identifiers are synthetic and must never be substituted for owner-authorized production migration. This is not a signed stable distribution.
+
+Maintainers must still review code provenance and rights for future contributions. Automated scanning does not prove exclusive authorship.

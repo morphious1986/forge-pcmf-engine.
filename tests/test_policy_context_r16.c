@@ -1,0 +1,50 @@
+#include <stdio.h>
+#include "pcmf_policy.h"
+static int chk(const char *note,int expected){int got=pcmf_note_is_sensitive(note);if(got!=expected){fprintf(stderr,"FAIL %s expected=%d got=%d\n",note,expected,got);return 0;}return 1;}
+int main(void){int ok=1;
+ok&=chk("PCMF health check passed",0);
+ok&=chk("Service health stable",0);
+ok&=chk("Replay token denied in stage",0);
+ok&=chk("Test token rejected in stage",0);
+ok&=chk("Patient health data attached",1);
+ok&=chk("PCMF health check passed; patient health data attached",1);
+ok&=chk("Replay token denied; access token attached",1);
+ok&=chk("password appeared in trace",1);
+ok&=chk("api key was supplied",1);
+ok&=chk("Home address noted",1);
+ok&=chk("Project build completed",0);
+ok&=chk("engine healthcare report",0);
+ok&=chk("replay tokenizer reported",0);
+ok&=chk("PCMF health and patient health",1);
+ok&=chk("test token and private key",1);
+ok&=chk("engine health stable, service health good",0);
+ok&=chk("replay token passed, test token passed",0);
+ok&=chk("tokenization logs",0);
+ok&=chk("secret credential attached",1);
+
+ok&=chk("Colony API key is stored only in desktop keyring; value is not stored in Library",0);
+ok&=chk("API key rotation event observed; no key value captured",0);
+ok&=chk("JWT token refresh is handled by the official SDK; token value is not persisted",0);
+ok&=chk("Secret storage boundary verified; secret value is not printed",0);
+ok&=chk("Password prompt path repaired; password value is never logged",0);
+ok&=chk("Email notification subsystem updated",0);
+ok&=chk("Home address field is disabled in this build",0);
+ok&=chk("Medical connector integration passed without patient data",0);
+ok&=chk("Address sanitizer rejects private addresses",0);
+ok&=chk("api key: abcdefghijklmnop",1);
+ok&=chk("api key sk-123abcdef",1);
+ok&=chk("Bearer abcdefghijklmnop",1);
+ok&=chk("password is hunter2",1);
+ok&=chk("password appeared in trace",1);
+ok&=chk("recovery code 12345678 was supplied",1);
+ok&=chk("home address is 123 Main St",1);
+ok&=chk("contact me at person@example.com",1);
+ok&=chk("medical diagnosis: asthma",1);
+ok&=chk("patient health data attached",1);
+ok&=chk("secret credential attached",1);
+ok&=chk("access token attached",1);
+ok&=chk("passport 123456789",1);
+ok&=chk("phone number 215-555-1234",1);
+ok&=chk("SSN 123-45-6789",1);
+ok&=chk("private key -----BEGIN PRIVATE KEY-----",1);
+if(ok){puts("PASS_PCMF_R16_SOL_LOCAL_CONTEXT_POLICY checks=45");}return ok?0:1;}

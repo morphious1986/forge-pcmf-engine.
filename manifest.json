@@ -1,0 +1,72 @@
+{
+  "admission_policy": "R16_SOL_LOCAL",
+  "build_id": "20261109-explicit-tier-write-r1",
+  "engine_core": "PCMF_LIVING_MEMORY_R14",
+  "install": {
+    "active_service_cutover_requires_owner_authorization": true,
+    "entrypoint": "scripts/install.sh",
+    "memory_data_preserved_on_update": true,
+    "rollback_supported": true
+  },
+  "local_model_connector": {
+    "api": "OpenAI-compatible /v1/models + /v1/chat/completions",
+    "default_endpoint": "http://127.0.0.1:8080/v1",
+    "default_model": "sol",
+    "memory_authority": false,
+    "memory_transfer_default": false,
+    "provider": "llama_cpp",
+    "transport": "LOOPBACK_ONLY"
+  },
+  "name": "pcmf-living-memory-r17-r244-native-offline",
+  "owner_acceptance": "R4_HARDENED_OWNER_GUI",
+  "owner_acceptance_challenge": "8_CHARACTER_RANDOM_SINGLE_USE",
+  "owner_acceptance_sound": "pcmf-approval-retro-chime-v2.wav",
+  "protocol": "PCMF_IPv1",
+  "release_note": "R244 adds governed client-scoped explicit HOT/WARM/COLD tier.set writes for ChatGPT/Forge and Sol without granting owner authority.",
+  "runtime": {
+    "core": [
+      "glibc"
+    ],
+    "local_model_server": "llama.cpp server or compatible loopback OpenAI API",
+    "owner_acceptance_optional": [
+      "paplay"
+    ],
+    "owner_acceptance_required": [
+      "X11",
+      "pkexec",
+      "zenity"
+    ]
+  },
+  "security": {
+    "local_model_pcmd_memory_authority": false,
+    "local_model_remote_endpoints_allowed": false,
+    "package_sha256_verified_before_install": true,
+    "pcmf_binary_hash_pinned_by_reviewer": true,
+    "raw_sensitive_note_persisted_before_owner_approval": false,
+    "reviewer_binary_hash_pinned": true
+  },
+  "target": {
+    "arch": "x86_64",
+    "install_scope": "per-user",
+    "os": "Ubuntu-compatible Linux"
+  },
+  "uninstall": {
+    "default": "complete_application_footprint_remove_memory_preserved",
+    "entrypoint": "scripts/uninstall.sh",
+    "purge_all": "guarded_exact_confirmation_including_default_isolated_instances",
+    "purge_data": "guarded_exact_confirmation",
+    "removes": [
+      "program_versions",
+      "cli_links",
+      "user_service",
+      "runtime_socket",
+      "install_config",
+      "desktop_launchers",
+      "application_menu_entries",
+      "autostart_entries",
+      "pcmf_owned_icons"
+    ],
+    "self_uninstall": "scripts/install.sh --self-uninstall"
+  },
+  "version": "PCMF_LIVING_MEMORY_R17_R244"
+}

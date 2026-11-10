@@ -1,0 +1,16 @@
+[Unit]
+Description=PCMF Living Memory local service (native C11/C++20)
+Documentation=file:/%h/.local/lib/pcmf/current/docs/README.md
+# Local-only AF_UNIX service; no network sockets, no message interception.
+After=default.target
+
+[Service]
+ExecStart=%h/.local/lib/pcmf/current/bin/pcmf-serve --root @DATA_ROOT@ --socket @SOCKET_PATH@
+Restart=on-failure
+RestartSec=3
+# Hardening: private access to the user session only
+PrivateTmp=yes
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=default.target
