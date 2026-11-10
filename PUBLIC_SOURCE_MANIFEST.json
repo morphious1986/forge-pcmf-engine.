@@ -1,0 +1,240 @@
+{
+  "date": "2026-11-09",
+  "disallowed_paths_excluded": true,
+  "format": "PCMF_R244_SOURCE_REVIEW_MANIFEST_1",
+  "included_files": {
+    ".gitignore": {
+      "sha256": "eba11ad66b9ea93aec52ea0c9834cd461287fd87c18a246942a45788136eb14f",
+      "size": 465
+    },
+    "CHANGELOG_PUBLIC.md": {
+      "sha256": "2f50a13bdf6262e790091eabab18d3a48eb710e727ef5c197c249e7c7a529336",
+      "size": 1472
+    },
+    "LICENSE": {
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "size": 11357
+    },
+    "NOTICE": {
+      "sha256": "41729e474954eb8643fc7d24088516db5d4080be966a4023fb44b7e936914f52",
+      "size": 1288
+    },
+    "README.md": {
+      "sha256": "236f632a82cec7f695ca945b12a63d97e2bcbe253536ad1e0930c393bbf3b276",
+      "size": 2567
+    },
+    "assets/SYNTHETIC_SOUND_PROVENANCE.json": {
+      "sha256": "8c7a90ddd2d41e2688de0dbfb80413f694c06d10b95473410c41052131f73344",
+      "size": 571
+    },
+    "assets/pcmf-approval-retro-chime-v2.wav": {
+      "sha256": "70efccfde903c12d6b688957faba1f16216d58a59364089040f3e071aad00b83",
+      "size": 9644
+    },
+    "docs/FORGE_INTEGRATION.md": {
+      "sha256": "cce3c50769bd0ad37660fabe815e1568a4eac79ae1822818f255900318b2f95f",
+      "size": 6240
+    },
+    "docs/HOLDS.md": {
+      "sha256": "21ce40dd6ccf71ea5cead23f76cbb2436244a626d9e3b313008d6e31e716a5bb",
+      "size": 3662
+    },
+    "docs/OPERATIONS.md": {
+      "sha256": "764068e607a0710ba6f1cc63f16343e04f2b8cdd17593bd36652ae4d070db08a",
+      "size": 4884
+    },
+    "docs/R16_R4_RELEASE.md": {
+      "sha256": "894f6064ca755235154ac38a3de29586b059d2e63301a2c490530a01394793ea",
+      "size": 2402
+    },
+    "docs/README.md": {
+      "sha256": "2bf1963a74aecd18b99fa4bfce21df4900063909a388d389bff9a132e29da5a8",
+      "size": 5221
+    },
+    "docs/SOL_INTEGRATION.md": {
+      "sha256": "4292b26126a207fdd169cd1e777d8ed19afcb22e0d9dbb86a89c29aa6f3de322",
+      "size": 2670
+    },
+    "docs/TEST_REPORT.md": {
+      "sha256": "48a76c97828e190f85ba850aec4100035efffd161e823e6b3a76760b876d28da",
+      "size": 7783
+    },
+    "docs/TROUBLESHOOTING.md": {
+      "sha256": "8dbcfb2435c8936c9b543a226765e302c740ee2d87a0c39e22fd6b41105704c6",
+      "size": 3845
+    },
+    "integrations/sol/app/pcmf_binding.py": {
+      "sha256": "e809f199ec598fbaea9984a04a70ba4d25361fb42579614e6e1cf9bf1e1c804e",
+      "size": 2877
+    },
+    "integrations/sol/app/pcmf_client.py": {
+      "sha256": "b682289419b52a2cb5dfe3f762cc779b275e7890558043f01965515896fb4700",
+      "size": 12262
+    },
+    "integrations/sol/app/pcmf_runtime.py": {
+      "sha256": "37d3ed08ead9b18e9dca4d103e31e28a5e1cabea40943bd5d9e500dfefeef1b1",
+      "size": 16005
+    },
+    "manifest.json": {
+      "sha256": "b7617d7d115f5b8b075f9ea4605245a4743e761989d51e6725e3dc1dbbcedec7",
+      "size": 2396
+    },
+    "scripts/build.sh": {
+      "sha256": "2f44e7a31d0e9fd1249c1d91f14121779adab0156fa24fc74427b72c54a17e9f",
+      "size": 2557
+    },
+    "scripts/configure_forge_gpt_r2.sh": {
+      "sha256": "572ff9d0dec2935d16130f30b910f11a02e63fbc22e7fb8eb326b377a18e4654",
+      "size": 4417
+    },
+    "scripts/install.sh": {
+      "sha256": "c4b412a403e33499272fa14ca2d2aa1234517276ac886344548ce35982354a5b",
+      "size": 15543
+    },
+    "scripts/install_instance.sh": {
+      "sha256": "e03386e16de881074d41171b384caccfed7072f5821b3eb74f6cb128bbd90131",
+      "size": 3912
+    },
+    "scripts/package_release.sh": {
+      "sha256": "4ba1a6d5609313cf16686024ee7c3242eba7b831df2a3dfd1e5bf90c330841c9",
+      "size": 2338
+    },
+    "scripts/public_safety_paths.py": {
+      "sha256": "29481ed6e3ac803725de2505a65de39831bfbae3b833ff12f5653d25b4c838d9",
+      "size": 5206
+    },
+    "scripts/test.sh": {
+      "sha256": "07acf15317d68a42ef0b2ffd70e3536a27a3cb02461d171b62ce2e6a90a6185a",
+      "size": 5789
+    },
+    "scripts/uninstall.sh": {
+      "sha256": "8cf68c5c439e030aacee8fda1232c66a1cfe44bee1233d549765af27a600ad2f",
+      "size": 7779
+    },
+    "scripts/usb_export.sh": {
+      "sha256": "a69aa316aa4ad110533475c1612b4b4e88368d115fa69346a88fbae84530d9c9",
+      "size": 5193
+    },
+    "src/forge_pcmf_owner_review_r4.cpp": {
+      "sha256": "4f8979248d87a95e25e36fbab8e15de11f3d0f93e9a13adb8cbf08787c0fd9c1",
+      "size": 21806
+    },
+    "src/pcmf_cli.cpp": {
+      "sha256": "8269b00a3709285c0bde724f62c5a20303285beec7f5eaaa6a8889e158288991",
+      "size": 15242
+    },
+    "src/pcmf_engine.cpp": {
+      "sha256": "f09dd969874c1bb3fa032990d201a31616f6028238d85644ad78bcd1160d8b50",
+      "size": 21959
+    },
+    "src/pcmf_engine.h": {
+      "sha256": "d930e9d3f50307be0451e31cc2cdac38458a9b42b5dc82fc2c7735d3da892fca",
+      "size": 8173
+    },
+    "src/pcmf_engine_admin.cpp": {
+      "sha256": "bb44e57d8adc125c7992a32e45545013b7528b88b1fe6e12991050198ffd33c3",
+      "size": 55144
+    },
+    "src/pcmf_engine_ops.cpp": {
+      "sha256": "0c39ffe34cfd1f7b1122c81ef2e66c0b03e5de04c18bd5f8a129eb47f57bb2e4",
+      "size": 19966
+    },
+    "src/pcmf_json.cpp": {
+      "sha256": "dbe27e605a860b5ede84a23c0f15f3e04ba75e224a0106581c6369a98547bc10",
+      "size": 5561
+    },
+    "src/pcmf_json.h": {
+      "sha256": "95c16b0757ac11720b7c52da8ee9f27f91391a05bf396e0f03aab7b88c401a3a",
+      "size": 1878
+    },
+    "src/pcmf_local_model.cpp": {
+      "sha256": "3fbb25788986ac2f09631e35b5240c5a9a3a26ca0b3533879a16209b06eaacda",
+      "size": 10740
+    },
+    "src/pcmf_mcp_review_r2.cpp": {
+      "sha256": "53a3792a35bc18e8417b3d29810fead0b95285022ce02f3af4ab2c350e011b51",
+      "size": 26276
+    },
+    "src/pcmf_policy.c": {
+      "sha256": "4ee57541846c315b110c66df1855270208eb5bd9331b49e4822577c9fdbdb5a0",
+      "size": 14583
+    },
+    "src/pcmf_policy.h": {
+      "sha256": "2bca91687ab3b58ea81736cb3147debe3aa5d4c4ed6f6b5bccac5ad560b2646e",
+      "size": 2053
+    },
+    "src/pcmf_serve.cpp": {
+      "sha256": "ab637bc8bdda0e3beb99bd659027d681d6060e135fdcaca89b3dfd0c539355f2",
+      "size": 9425
+    },
+    "src/pcmf_setup.cpp": {
+      "sha256": "3b80feaac0bc62a56ada3804e64e77c8fce70751bf94811bbccdccfed2d42592",
+      "size": 27725
+    },
+    "src/pcmf_sha256.c": {
+      "sha256": "2988e55821e3ba9e5177344d4636fbf8c6ff6eb6fa71e84bf10bde43d1653f9c",
+      "size": 4970
+    },
+    "src/pcmf_sha256.h": {
+      "sha256": "87d30a730686369ab2bb766d5b2ef0ab72cf97088e5e31c271605e4abb47571f",
+      "size": 1279
+    },
+    "src/pcmf_util.cpp": {
+      "sha256": "33314a7fcb9199e65bed58aa1ae601f2e1554c7803c5c241671a7b0951e3db3f",
+      "size": 9587
+    },
+    "src/pcmf_util.h": {
+      "sha256": "3e7566ca392ab18921623e46dbb10537667e4f05baf3b9f9cc393354718879a2",
+      "size": 3115
+    },
+    "systemd/pcmf.service": {
+      "sha256": "8ea882c1b0d02da7f9a89db2ef7178328427baa0af1396bf5563313b9b840a57",
+      "size": 489
+    },
+    "tests/pcmf_selftest.cpp": {
+      "sha256": "963c86b1f1ffd7f028159240a46f708e69d4d5cf44241fd832ed111443d994a5",
+      "size": 54375
+    },
+    "tests/test_harness.h": {
+      "sha256": "9ae166dcf13025e323712d0c6c3b1e7f24d1cb4567654c9a0ce741d6b34dee33",
+      "size": 5101
+    },
+    "tests/test_local_model_connector.py": {
+      "sha256": "aa0c2864c995c7df28145e846472179b8a088da9efed317e217b7b347776fa27",
+      "size": 3533
+    },
+    "tests/test_policy_context_r16.c": {
+      "sha256": "ba7482b6112ad7b3441358ebaf1f94ff7906a7eee2981d8cf9c46e37610dbcdf",
+      "size": 2455
+    },
+    "tests/test_policy_sol_local_admission_r16.c": {
+      "sha256": "bbf7f4996e27de594a4e121d6f537cbeaa79dd83d4ba00b497370301ccf41172",
+      "size": 1985
+    },
+    "tests/test_public_safety_paths.py": {
+      "sha256": "022d1ea552857bc064ef91a3e5f7aaea55b3004e6893cdf47399f51b068083c7",
+      "size": 4840
+    },
+    "tests/test_public_socket_boundary.py": {
+      "sha256": "d522d35d4b300237577eacce2cee16bc15b87c5b3ae704ca0fff5b32e1961bc5",
+      "size": 3340
+    },
+    "tests/test_public_sol_config.py": {
+      "sha256": "4de634fa5835f575880d46b0226c29146ba6ea54bee99867dc69dd2ec6a11ce1",
+      "size": 1747
+    },
+    "tests/test_setup_local_llama.py": {
+      "sha256": "cd36ff508bd1f92b82e0718f3f99d5dfe039de6e8d948fbf7ec2ba2d0e08c5ad",
+      "size": 1970
+    }
+  },
+  "legal_chain_of_title_independently_confirmed": false,
+  "nonloopback_addresses": "ONLY_RFC5737_TEST_NET_1_EXAMPLE",
+  "old_audio_asset_reused": false,
+  "original_offline_release_sha256": "f0177d166d3a8413823d5d8a0bfdfb79eceb2889c0d6ba05722845011fec0c39",
+  "private_identity_and_credential_scan": "PASS",
+  "production_root_read_or_copied": false,
+  "public_history_imported": false,
+  "stable_release_approved": false,
+  "state": "SOURCE_CANDIDATE_PENDING_REVIEW"
+}

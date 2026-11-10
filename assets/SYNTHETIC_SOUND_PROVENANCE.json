@@ -1,0 +1,9 @@
+{
+  "asset": "pcmf-approval-retro-chime-v2.wav",
+  "external_audio_samples": false,
+  "format": "PCMF_PUBLIC_SYNTHETIC_CHIME_1",
+  "generation": "stdlib wave module; deterministic two-tone 660Hz/880Hz sine function with 15ms attack and 70ms decay, 12kHz mono PCM16, 0.4s",
+  "note": "Replacement for historical audio asset. This new simple waveform is generated from a mathematical algorithm; no recording or third-party audio source was used.",
+  "old_unknown_rights_audio_reused": false,
+  "sha256": "70efccfde903c12d6b688957faba1f16216d58a59364089040f3e071aad00b83"
+}
