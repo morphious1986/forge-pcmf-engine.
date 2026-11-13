@@ -90,10 +90,29 @@ class PendingReviewBridge:
             raise BridgeError("EXPLICIT_OWNER_OPT_IN_REQUIRED")
         meta = self.pending_metadata(token)
         self._verify_original(meta, original_note)
-        return store(self.inbox, token, self.root_id, original_note, owner_passphrase)
+        receipt = store(self.inbox, token, self.root_id, original_note, owner_passphrase)
+        try:
+            second = self.pending_metadata(token)
+            if second != meta:
+                raise BridgeError("PENDING_REVIEW_CHANGED_DURING_CAPTURE")
+        except Exception:
+            # A stale or resolved token must not leave a newly captured note
+            # in deferred storage. This cleanup affects only the newly
+            # created experimental inbox item, never canonical PCMF.
+            from deferred_escrow import discard
+            try:
+                discard(self.inbox, token, self.root_id)
+            except Exception as cleanup_exc:
+                raise BridgeError("CAPTURE_REVALIDATION_FAILED_MANUAL_ESCROW_CLEANUP_REQUIRED") from cleanup_exc
+            raise
+        return receipt
 
     def unlock_if_still_pending(self, *, token, owner_passphrase):
         meta = self.pending_metadata(token)
         note = retrieve(self.inbox, token, self.root_id, owner_passphrase)
         self._verify_original(meta, note)
+        # Refuse to disclose an entry that was resolved or replaced during unlock.
+        second = self.pending_metadata(token)
+        if second != meta:
+            raise BridgeError("PENDING_REVIEW_CHANGED_DURING_UNLOCK")
         return note
