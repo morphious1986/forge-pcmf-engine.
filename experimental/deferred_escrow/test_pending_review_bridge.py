@@ -86,6 +86,58 @@ class BridgeTests(unittest.TestCase):
         with self.assertRaisesRegex(BridgeError,"TOKEN_NOT_PENDING"):
             self.bridge.unlock_if_still_pending(token=TOKEN,owner_passphrase=PASSWORD)
         self.assertTrue(self.inbox.exists())
+    def test_resolved_during_capture_discards_just_created_escrow(self):
+        original=self.bridge.pending_metadata
+        count=[0]
+        def pending_then_resolved(token):
+            count[0]+=1
+            if count[0]==2:
+                raise BridgeError("TOKEN_NOT_PENDING_OR_AMBIGUOUS")
+            return original(token)
+        with patch.object(self.bridge,"pending_metadata",side_effect=pending_then_resolved):
+            with self.assertRaisesRegex(BridgeError,"TOKEN_NOT_PENDING"):
+                self.capture()
+        self.assertFalse((self.inbox/(TOKEN+".json")).exists())
+
+    def test_changed_metadata_during_capture_discards_escrow(self):
+        original=self.bridge.pending_metadata
+        count=[0]
+        def changed(token):
+            count[0]+=1
+            data=original(token)
+            return data if count[0]==1 else dict(data,note_hash="f"*64)
+        with patch.object(self.bridge,"pending_metadata",side_effect=changed):
+            with self.assertRaisesRegex(BridgeError,"CHANGED_DURING_CAPTURE"):
+                self.capture()
+        self.assertFalse((self.inbox/(TOKEN+".json")).exists())
+
+    def test_resolved_during_unlock_fails_closed(self):
+        self.capture()
+        from unittest.mock import patch
+        from pending_review_bridge import retrieve
+        original = self.bridge.pending_metadata
+        count = [0]
+        def pending_then_resolved(token):
+            count[0] += 1
+            if count[0] == 2:
+                raise BridgeError("TOKEN_NOT_PENDING_OR_AMBIGUOUS")
+            return original(token)
+        with patch.object(self.bridge, "pending_metadata", side_effect=pending_then_resolved):
+            with self.assertRaisesRegex(BridgeError,"TOKEN_NOT_PENDING"):
+                self.bridge.unlock_if_still_pending(token=TOKEN,owner_passphrase=PASSWORD)
+
+    def test_changed_hash_between_unlock_checks_fails_closed(self):
+        self.capture()
+        original = self.bridge.pending_metadata
+        count = [0]
+        def mutate_after_first_read(token):
+            count[0] += 1
+            result=original(token)
+            return result if count[0] == 1 else dict(result,note_bytes=result["note_bytes"]+1)
+        with patch.object(self.bridge,"pending_metadata",side_effect=mutate_after_first_read):
+            with self.assertRaisesRegex(BridgeError,"CHANGED_DURING_UNLOCK"):
+                self.bridge.unlock_if_still_pending(token=TOKEN,owner_passphrase=PASSWORD)
+
     def test_wrong_password(self):
         self.capture()
         with self.assertRaises(Exception):
