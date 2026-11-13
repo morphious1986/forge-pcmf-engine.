@@ -1,0 +1,12 @@
+[Unit]
+Description=Check PCMF experimental deferred review 72h expiration every minute
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=1min
+AccuracySec=1s
+Persistent=true
+Unit=pcmf-deferred-r12-gc.service
+
+[Install]
+WantedBy=timers.target
