@@ -7,7 +7,7 @@ import unittest
 from pathlib import Path
 import deferred_escrow as e
 
-T = "a" * 32
+T = "a" * 64
 R = "b" * 32
 P = "owner synthetic passphrase with adequate length"
 NOTE = "Synthetic review content: test data, no personal information."
@@ -38,9 +38,9 @@ class EscrowTests(unittest.TestCase):
 
     def test_swapped_token_refused(self):
         e.store(self.root,T,R,NOTE,P)
-        os.rename(self.root/(T+".json"),self.root/("c"*32+".json"))
+        os.rename(self.root/(T+".json"),self.root/("c"*64+".json"))
         with self.assertRaises(e.EscrowError):
-            e.retrieve(self.root,"c"*32,R,P)
+            e.retrieve(self.root,"c"*64,R,P)
 
     def test_root_identity_binding(self):
         e.store(self.root,T,R,NOTE,P)
