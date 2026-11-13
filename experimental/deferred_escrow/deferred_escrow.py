@@ -17,7 +17,7 @@ from cryptography.hazmat.primitives.kdf.scrypt import Scrypt
 
 MAX_NOTE_BYTES = 65536
 MAX_RECORD_BYTES = 131072
-TOKEN_PATTERN = re.compile(r"[a-f0-9]{32}\Z")
+TOKEN_PATTERN = re.compile(r"[a-f0-9]{64}\Z")
 ROOT_PATTERN = re.compile(r"[a-f0-9]{32}\Z")
 VERSION = "PCMF_DEFERRED_OWNER_ESCROW_V1"
 
