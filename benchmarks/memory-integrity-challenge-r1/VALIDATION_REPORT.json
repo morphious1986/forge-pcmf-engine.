@@ -1,0 +1,36 @@
+{
+  "date_utc": "2026-11-13/14",
+  "fixtures": {
+    "cases": 12,
+    "events": 25,
+    "separate_gold_file": true
+  },
+  "limitations": "Local synthetic suite only; no external review, blind ranking, security certification, or model evaluation.",
+  "project": "Memory Integrity Challenge R1",
+  "python_requirement": "3.10+; stdlib only",
+  "schema": "forge.memory_integrity_challenge.validation.v1",
+  "scope": {
+    "colony_publication": false,
+    "github_publication": false,
+    "production_pcmf_changes": false
+  },
+  "scoring": {
+    "max_score": 60,
+    "minimal_example": 15,
+    "naive_negative_control": 25,
+    "naive_perfect_cases": 3,
+    "oracle_selftest": 60
+  },
+  "security_review": {
+    "actual_user_records": false,
+    "fixture_data": "synthetic",
+    "private_paths_or_secrets_detected": false,
+    "third_party_code": "none"
+  },
+  "status": "LOCAL_TESTED_SOURCE_CANDIDATE_NOT_PUBLISHED",
+  "tests": {
+    "failed": 0,
+    "passed": 19,
+    "run": 19
+  }
+}

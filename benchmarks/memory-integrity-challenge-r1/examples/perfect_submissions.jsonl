@@ -1,0 +1,12 @@
+{"case_id":"C01","decision":"ANSWER","evidence_ids":["E002"],"value":"blue"}
+{"case_id":"C02","decision":"ANSWER","evidence_ids":["E003"],"value":"Dock 12"}
+{"case_id":"C03","decision":"ANSWER","evidence_ids":["E005"],"value":"Lena"}
+{"case_id":"C04","decision":"ABSTAIN","evidence_ids":[],"value":null}
+{"case_id":"C05","decision":"ABSTAIN","evidence_ids":[],"value":null}
+{"case_id":"C06","decision":"ABSTAIN","evidence_ids":[],"value":null}
+{"case_id":"C07","decision":"ANSWER","evidence_ids":["E012"],"value":"bronze"}
+{"case_id":"C08","decision":"ANSWER","evidence_ids":["E015"],"value":"closed"}
+{"case_id":"C09","decision":"ANSWER","evidence_ids":["E017"],"value":"v3"}
+{"case_id":"C10","decision":"ABSTAIN","evidence_ids":[],"value":null}
+{"case_id":"C11","decision":"ANSWER","evidence_ids":["E022"],"value":"delta"}
+{"case_id":"C12","decision":"ABSTAIN","evidence_ids":[],"value":null}
