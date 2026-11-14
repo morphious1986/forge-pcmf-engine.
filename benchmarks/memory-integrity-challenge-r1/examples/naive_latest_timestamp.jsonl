@@ -1,0 +1,12 @@
+{"case_id": "C01", "decision": "ANSWER", "evidence_ids": ["E002"], "value": "blue"}
+{"case_id": "C02", "decision": "ANSWER", "evidence_ids": ["E004"], "value": "Dock 99"}
+{"case_id": "C03", "decision": "ANSWER", "evidence_ids": ["E006"], "value": "Miro"}
+{"case_id": "C04", "decision": "ANSWER", "evidence_ids": ["E007"], "value": "green"}
+{"case_id": "C05", "decision": "ANSWER", "evidence_ids": ["E009"], "value": "south"}
+{"case_id": "C06", "decision": "ABSTAIN", "evidence_ids": [], "value": null}
+{"case_id": "C07", "decision": "ANSWER", "evidence_ids": ["E013"], "value": "gold"}
+{"case_id": "C08", "decision": "ANSWER", "evidence_ids": ["E016"], "value": "open"}
+{"case_id": "C09", "decision": "ANSWER", "evidence_ids": ["E017"], "value": "v3"}
+{"case_id": "C10", "decision": "ANSWER", "evidence_ids": ["E020"], "value": "ready"}
+{"case_id": "C11", "decision": "ANSWER", "evidence_ids": ["E023"], "value": "alpha"}
+{"case_id": "C12", "decision": "ANSWER", "evidence_ids": ["E025"], "value": "sector-8"}

@@ -1,0 +1,12 @@
+{"case_id":"C01","event_ids":["E001","E002"],"question":"What is Lantern's current recorded paint?","tags":["explicit_correction"]}
+{"case_id":"C02","event_ids":["E003","E004"],"question":"Which dock is verified for Harbor?","tags":["newer_unverified"]}
+{"case_id":"C03","event_ids":["E005","E006"],"question":"Who is Orion's recorded operator?","tags":["subject_isolation"]}
+{"case_id":"C04","event_ids":["E007"],"question":"What is Cedar's authorized access color?","tags":["missing_provenance","abstention"]}
+{"case_id":"C05","event_ids":["E008","E009"],"question":"What is Compass's direction?","tags":["unresolved_conflict","abstention"]}
+{"case_id":"C06","event_ids":["E010","E011"],"question":"What is Quartz's current release code?","tags":["revocation","abstention"]}
+{"case_id":"C07","event_ids":["E012","E013"],"question":"What is Atlas's verified badge?","tags":["untrusted_instruction","newer_unverified"]}
+{"case_id":"C08","event_ids":["E014","E015","E016"],"question":"What is the last approved gate state for Ibis?","tags":["stale_snapshot","explicit_correction"]}
+{"case_id":"C09","event_ids":["E017","E018"],"question":"What is Piper's latest verified revision?","tags":["out_of_order_history"]}
+{"case_id":"C10","event_ids":["E019","E020"],"question":"What is Eastport's approved status?","tags":["cross_subject_contamination","abstention"]}
+{"case_id":"C11","event_ids":["E021","E022","E023"],"question":"What is Kite's currently approved channel?","tags":["correction","stale_echo"]}
+{"case_id":"C12","event_ids":["E024","E025"],"question":"What route has been accepted for Mosaic?","tags":["pending_is_not_approved","abstention"]}
