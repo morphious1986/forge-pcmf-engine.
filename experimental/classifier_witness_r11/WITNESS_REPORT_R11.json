@@ -1,0 +1,213 @@
+{
+  "summary": {
+    "baseline_c_sha256": "146c0b960009655f7bb08f06ec08b569fdf99e8219c2b882d4b275aa23e40c9f",
+    "candidate_reduced_reviews": 3,
+    "canonical_pending_notes_examined": false,
+    "changed_case_ids": [
+      "ci_run_id",
+      "labelled_build_timestamp",
+      "numeric_build_id"
+    ],
+    "deployment": "SHADOW_ONLY",
+    "native_engine": "C11",
+    "owner_verified_production_labels": 0,
+    "policy_promoted": false,
+    "promotion_gate": "OWNER_REVIEW_REQUIRED_WITH_LABELED_WITNESSES",
+    "samples": 21,
+    "schema": "PCMF_SHADOW_WITNESS_R11",
+    "shadow_c_sha256": "21f4e7945c1c475fed92073feb42ed45f2bc50fdab2faee34a7fbe448a3e4be5",
+    "test_c_sha256": "4a0f73d6acf810229d43b7f0483b216b35943506619bec3f5533dceb1ae36020",
+    "unmodified_sensitive_cases": 14
+  },
+  "witnesses": [
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "ci_run_id",
+      "decision_changed": true,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "AUTO_ADMIT_ELIGIBLE",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "invalid_timestamp_hour",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "labelled_build_timestamp",
+      "decision_changed": true,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "AUTO_ADMIT_ELIGIBLE",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "AUTO_ADMIT_ELIGIBLE",
+      "case_id": "labelled_hex_sha256",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "AUTO_ADMIT_ELIGIBLE",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "AUTO_ADMIT_ELIGIBLE",
+      "case_id": "labelled_numeric_sha256",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "AUTO_ADMIT_ELIGIBLE",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "metadata_about_secret",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "numeric_build_id",
+      "decision_changed": true,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "AUTO_ADMIT_ELIGIBLE",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "AUTO_ADMIT_ELIGIBLE",
+      "case_id": "numeric_sha256_no_label",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "AUTO_ADMIT_ELIGIBLE",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "AUTO_ADMIT_ELIGIBLE",
+      "case_id": "ordinary_project_note",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "AUTO_ADMIT_ELIGIBLE",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "person_account_disclosure",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "phone_like_number",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "prefix_collision",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "private_key_mention",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "secret_label_disclosure",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "technical_id_with_account",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "technical_id_with_email",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "technical_id_with_password",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "technical_id_with_private_key",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "timestamp_bad_month",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "timestamp_no_label",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    },
+    {
+      "baseline_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "case_id": "unlabelled_long_number",
+      "decision_changed": false,
+      "policy_promotion": "NOT_AUTHORIZED",
+      "shadow_verdict": "QUARANTINE_REVIEW_REQUIRED",
+      "source": "SYNTHETIC_UNIT_TEST",
+      "witness_status": "REPRODUCIBLE_TEST_NOT_OWNER_APPROVAL"
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+[Unit]
+Description=PCMF experimental encrypted deferred review TTL cleanup (metadata-only)
+ConditionPathExists=%h/.config/pcmf/deferred-queue-r12-gc.json
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/python3 %h/.local/libexec/pcmf-r12/queue_gc_r12.py --config %h/.config/pcmf/deferred-queue-r12-gc.json
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=read-only
+ReadWritePaths=%h/.local/share/pcmf-deferred-queue-r12
+UMask=0077
