@@ -1,30 +1,27 @@
 # Security Policy
 
-## Publication boundary
+## Public review versus stable release
 
-This public repository is for the **PCMF engine and safe documentation**. The live PCMF installation, canonical memory ledger, user data, secrets, credentials, privileged machine-access configuration, and private backups are **not public project assets**.
+The [sanitized R17/R244 native engine source](https://github.com/morphious1986/forge-pcmf-engine./tree/review/pcmf-r244-public-source-20261109) is publicly accessible on its review branch, with the [primary review in PR #2](https://github.com/morphious1986/forge-pcmf-engine./pull/2). **It has not been merged into `main` or accepted as a stable release.** Experimental and later development pull requests have separate readiness requirements.
 
-The first complete source release is pending review. Until a release and supported versions are documented, do not assume any published README is an installed or supported build.
+This public repository is for reviewed source candidates and safe technical documentation. The live PCMF installation, canonical memory ledger, user records, secrets, credentials, privileged access configuration, operational history, and private backups are **not public project assets**. Public source visibility grants no authority over running systems.
 
 ## Reporting a vulnerability
 
-Please avoid publishing exploit details, credentials, memory records, or private host information in a public GitHub issue or pull request.
+**Do not include exploit steps, credentials, private memory, production logs, or sensitive implementation details in a public GitHub issue, PR, or Colony comment.**
 
-If GitHub's **Report a vulnerability** option is available in the repository's Security tab, use it to send a private report. If it is not available, request a private reporting channel from the maintainer without posting the sensitive details publicly.
+If the repository's Security tab offers **Report a vulnerability**, use that private channel. Otherwise, request a private reporting channel from the maintainer without posting sensitive details publicly.
 
-A useful private report includes:
-- A concise description and expected security boundary.
-- A reproduction using synthetic data and an isolated environment.
-- Affected component and version or commit, if known.
-- Impact, prerequisites, and any safe mitigation proposal.
+A useful private report includes a concise security boundary, affected source branch/commit, impact and prerequisites, a synthetic isolated reproduction where possible, and proposed mitigations. Do not attempt verification against production memory or other users' systems.
 
 ## Security design principles
 
-- Explicit owner authority for sensitive actions.
-- Governed memory admission and independently verified provenance.
-- Fail-closed behavior on mismatched or incomplete state.
-- Separation of execution tools from memory authority.
-- No assumption that an immutable checkpoint proves current live-state identity.
-- No secret, personal, or production-memory disclosure in tests or examples.
+- Explicit owner authority for sensitive actions and memory admission.
+- Governed provenance and independent verification of observed state.
+- Fail-closed behavior for missing or contradictory authorization and incomplete state.
+- Separate machine execution from memory-writer authority.
+- No assumption that a historical checkpoint proves current live-state identity.
+- Synthetic public fixtures instead of real memory or production data.
+- Independent review before claiming release readiness.
 
-Security fixes should be reviewed and verified before publication. Maintainers may request more evidence or hold changes until risks are resolved.
+Security-sensitive changes require appropriate review and test evidence. A draft PR, source publication, or public test summary is not a supported release or deployment permission.
