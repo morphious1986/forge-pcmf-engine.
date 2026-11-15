@@ -2,40 +2,47 @@
 
 An open-source persistent-memory and continuity engine for AI systems and agents, designed around **deterministic state, governed memory admission, provenance tracking, owner authorization, and auditable decisions**.
 
-> **Early-stage public collaboration repository.** The native PCMF engine source has **not yet been published here**. Its first public source package is subject to security, privacy, dependency, and licensing review. No installation or production-use claims are made by this README.
+**Native source is publicly available for community review.** The sanitized R17/R244 source is on a public review branch; it has **not** been merged into `main`, tagged as a stable release, or approved for production installation.
 
-## What we're working toward
+## Find the code and help review it
 
-PCMF separates a model's *proposal* from the deterministic decision to accept, reject, or review a lasting memory. The public project aims to make state transitions testable, keep a trace of decisions, and prevent unverified snapshots or model-generated claims from silently becoming authoritative.
+**Start with the native source, not the experimental UI branch:**
 
-Key design areas for community review:
-- Provenance and evidence needed for durable memory admission.
-- Explicit owner consent and review-required stop conditions.
-- Single-writer continuity and fail-closed conflict handling.
-- Clear boundaries between execution tools, personal memory, and system state.
-- Reproducible tests, documentation, threat modeling, and portable deployments.
+- **[Browse the R17/R244 native source](https://github.com/morphious1986/forge-pcmf-engine./tree/review/pcmf-r244-public-source-20261109)** — source code, synthetic tests, build scripts, and review documentation.
+- **[R17/R244 community source-review PR #2](https://github.com/morphious1986/forge-pcmf-engine./pull/2)** — the primary place to discuss the native engine, submit review findings, and see the source diff.
+- [CONTRIBUTING.md](CONTRIBUTING.md) — how to reproduce tests and propose a review or change without accessing anyone's private system.
+- [SECURITY.md](SECURITY.md) — private vulnerability-reporting guidance; do not publish exploitable details or confidential evidence in issues.
+- [Repository issues](../../issues) — suitable for non-sensitive bug reports, synthetic reproductions, portability questions, and feature proposals.
 
-These are project goals and design constraints, **not a claim that every feature is available in a published release**.
+**Additional workstreams are independent of primary source review:**
 
-## Help build it
+- [PR #3](https://github.com/morphious1986/forge-pcmf-engine./pull/3) — experimental Control Center, deferred review, and governance research; **draft**.
+- [PR #4](https://github.com/morphious1986/forge-pcmf-engine./pull/4) — synthetic Memory Integrity Challenge benchmark; **draft**.
+- [PR #5](https://github.com/morphious1986/forge-pcmf-engine./pull/5) — documentation on status-language semantic round-trip reliability; **draft**.
+- [PR #6](https://github.com/morphious1986/forge-pcmf-engine./pull/6) — sanitized R245 development summary and publication checks, **not the R245 runtime source**; **draft**.
 
-**Contributors are welcome now**, including people working on C++, Linux, agent infrastructure, evaluation, security, test engineering, and technical writing.
+Please do not mistake the experimental PRs for the base engine, or GitHub visibility for deployment authorization.
 
-1. Browse or open an [issue](../../issues) to discuss a feature, bug, test plan, or design question.
-2. Read [CONTRIBUTING.md](CONTRIBUTING.md) for the proposed fork → branch → pull request → review workflow.
-3. Use the [pull request template](.github/PULL_REQUEST_TEMPLATE.md) when submitting a change.
-4. Report vulnerabilities privately as described in [SECURITY.md](SECURITY.md).
+## What PCMF is designed to do
 
-Contributions are reviewed before merging. You do **not** need access to the owner's machines, private memory, or production installation to contribute.
+PCMF separates a model's memory *proposal* from the deterministic, governed decision to accept, reject, or require owner review. Public engineering areas include provenance and replay, client-scoped state retrieval, single-writer fencing, fail-closed conflict handling, synthetic tests, and portable local-first integrations.
 
-## Security and privacy boundary
+Capabilities described on different review branches have different maturity levels. No public source review is proof of full production acceptance.
 
-**Never upload** personal memory records, credentials, tokens, live ledger databases, privileged configuration, production backups, or real user/customer data. Please use synthetic examples. The public engine is separate from private operational state.
+## Getting started with review
 
-## License
+Use the public R244 review branch and its own README for build prerequisites and **synthetic test** commands. Run tests only in a disposable VM, container, or separate test user with an isolated home directory. Some release tests exercise installer and uninstall behavior; never point them at real memory stores or a running installation.
 
-[Apache License 2.0](LICENSE). It permits use, modification, distribution, and commercial adoption under its terms.
+Reviewers can contribute by opening a non-sensitive issue, commenting on [PR #2](https://github.com/morphious1986/forge-pcmf-engine./pull/2), or submitting a focused PR based on the appropriate review branch. No credentials, personal data, production access, or local machine access are needed.
 
-## Release status
+## Security and privacy
 
-Public source review and initial installation documentation: **pending**. The repository currently contains governance and collaboration documentation, not a complete downloadable engine.
+**Never publish** personal memory, credentials, tokens, live ledgers, user data, privileged machine configuration, private backups, or identifiable production traces. Use invented, synthetic examples. Report vulnerabilities through the private channel described in [SECURITY.md](SECURITY.md).
+
+The public code is separate from the canonical PCMF writer and private operational state. No repository commit, PR, or merge grants authority over an installed system.
+
+## License and release status
+
+[Apache License 2.0](LICENSE). The source is offered for inspection and collaboration under its applicable license and notices.
+
+**Publication:** sanitized native R17/R244 source is public on its review branch. **Review:** open. **Stable release:** not declared. **Production installation and memory migration:** not authorized by this publication.
