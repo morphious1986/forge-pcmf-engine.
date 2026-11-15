@@ -1,44 +1,44 @@
 # Contributing to Forge PCMF Engine
 
-Thanks for helping build a trustworthy, open-source continuity engine for AI systems and agents.
+Thank you for helping review a deterministic, governed continuity engine for AI systems and agents.
 
-## Project status
+## Where the real code is
 
-This repository is being prepared for a security-reviewed source release. The presence of a README or license **does not** mean the native engine source, binaries, or production integrations have been published or accepted here yet.
+The sanitized **R17/R244 native source is already public** on a review branch. It is not yet merged to `main` or declared a stable release.
 
-You can contribute now by opening an issue with a design proposal, an API suggestion, documentation feedback, test ideas, or security-safe reproducible bug reports. Code contributions can follow once the reviewed source is published.
+- [Browse source files and synthetic tests](https://github.com/morphious1986/forge-pcmf-engine./tree/review/pcmf-r244-public-source-20261109)
+- [Review native engine — PR #2](https://github.com/morphious1986/forge-pcmf-engine./pull/2) — **primary engineering review target**
+- [Repository issues](../../issues) — non-sensitive technical proposals and reproducible defects
+- [Security reporting](SECURITY.md) — private reporting of sensitive findings
 
-## Ways to collaborate
+The default `main` branch is currently the public collaboration and navigation surface, **not** the latest native engine code. Select the R244 review branch to inspect or test it.
 
-- **Issues:** bugs, feature requests, portability problems, testing gaps, and architecture proposals.
-- **Fork + pull request:** propose a small, reviewable change with clear motivation, tests where applicable, and updated documentation.
-- **Reviews:** help assess correctness, reproducibility, security, accessibility, and backward compatibility.
-- **Documentation:** installation guidance, diagrams, examples using invented data, and clearer threat-model explanations.
+## Where different contributions belong
 
-Search existing issues and pull requests before opening duplicates.
+- **Native R17/R244 engine:** [PR #2](https://github.com/morphious1986/forge-pcmf-engine./pull/2) or small focused PRs based on its source branch, including C11/C++20 correctness, deterministic replay, synthetic privacy tests, portability, and documentation.
+- **Experimental Control Center and deferred review:** [PR #3](https://github.com/morphious1986/forge-pcmf-engine./pull/3) — draft; not interchangeable with the core engine.
+- **Memory Integrity Challenge:** [PR #4](https://github.com/morphious1986/forge-pcmf-engine./pull/4) — synthetic benchmark, draft.
+- **Memory status language:** [PR #5](https://github.com/morphious1986/forge-pcmf-engine./pull/5) — documentation research, draft.
+- **Sanitized R245 development update:** [PR #6](https://github.com/morphious1986/forge-pcmf-engine./pull/6) — includes a public publication preflight tool, **not** the private R245 implementation; draft.
 
-## Contribution workflow
+To propose native code changes, use the R244 source branch as your starting point and state that branch in the pull request. Do not base changes on experimental branches unless reviewing their specific experimental scope.
 
-1. Open an issue for substantial changes so maintainers and contributors can agree on scope.
-2. Fork the repository and create a focused branch.
-3. Make the smallest coherent change; include tests and documentation when appropriate.
-4. Run the published validation commands once the implementation is available.
-5. Open a pull request describing the behavior, verification performed, and any compatibility/security impact.
-6. Address review feedback. Maintainers decide whether and when to merge.
+## Reproducible review process
 
-**No direct write access or production PCMF access is needed to contribute.** A pull request is a proposal, not automatic admission into the engine.
+1. Inspect the [R244 branch README](https://github.com/morphious1986/forge-pcmf-engine./blob/review/pcmf-r244-public-source-20261109/README.md) for prerequisites and synthetic test commands.
+2. Run everything in a disposable VM, container, or isolated test user, with its own HOME and no connection to private PCMF state. Some scripts exercise installation and guarded synthetic data removal; do not run them against a personal installation.
+3. Open a focused issue or pull request with a clear description of the expected behavior and synthetic input/output evidence.
+4. Cite exact source branch and commit, test command/results, and any limitations. Do not call an internal test result independent security certification.
+5. Address independent review feedback. Maintainers separately determine merge, release, and deployment readiness.
 
-## Important boundaries
+Security problems involving exploitable conditions, access-control boundaries, or private implementation details should go through [SECURITY.md](SECURITY.md), **not** public issues or post comments.
 
-- Never commit live memory contents, personal records, credentials, access tokens, host details, production configuration, private backups, or real customer data.
-- Use only synthetic or explicitly publishable test fixtures.
-- Do not bypass governed admission, provenance checks, owner authorization, fail-closed behavior, or single-writer authority.
-- Do not assume a saved checkpoint represents the current live state.
-- Do not make changes to someone else's running installation as part of a contribution.
-- Security-sensitive concerns should use the private channel described in [SECURITY.md](SECURITY.md), not a public issue.
+## Contribution boundaries
+
+Never upload real memory records, credentials, tokens, operational logs, host-specific paths, production configuration, private backups, or customer data. Use synthetic fixtures only. No contributor requires local machine access, production memory, keys, or owner authorization to review and propose public changes.
+
+A pull request is a proposal. It does not grant memory-writer authority, weaken `REVIEW_REQUIRED`, install code, authorize production access, or represent a stable release.
 
 ## License
 
-The repository uses [Apache License 2.0](LICENSE). Contributions intended for inclusion must be compatible with that license. Please identify any third-party material and its license before submitting it.
-
-The goal is an approachable, independently testable engine **without publishing private operational memory**.
+Contributions must be compatible with the repository's [Apache License 2.0](LICENSE) and identify any included third-party work and applicable licensing.
